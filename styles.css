@@ -64,6 +64,10 @@ main {
     padding: 0 1rem;
 }
 
+h1 {
+    margin-block-start: 0.5rem;
+}
+
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -123,6 +127,7 @@ main {
     color: var(--ink);
     max-width: 68ch;
     font-size: 1.2rem;
+    line-height: 1.45;
 }
 
 .section {
