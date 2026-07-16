@@ -4,17 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leif Schaumann | Personal Website</title>
-    <meta name="description" content="Personal website for Leif Schaumann: projects, writing, and contact.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap"
-        rel="stylesheet">
+    <title>Leif Schaumann</title>
+    <meta name="description" content="Personal website of Leif Schaumann.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="top">
     <div class="site">
         <header class="topbar reveal">
             <a class="brand" href="#top">Leif Schaumann</a>
@@ -25,70 +20,31 @@
             </nav>
         </header>
 
-        <main id="top">
-            <section class="hero section">
-                <article class="hero-card reveal delay-1">
-                    <p class="kicker">Personal Site Starter</p>
-                    <h1>Building useful things on the web.</h1>
-                    <p class="hero-copy">Hi, I am Leif. This is a starting point for your site. Swap this text with a
-                        short intro, what you are focused on, and the kind of opportunities you want to attract.</p>
-                    <div class="hero-actions">
-                        <a class="btn primary" href="#projects">See projects</a>
-                        <a class="btn secondary" href="#contact">Get in touch</a>
+        <main>
+
+            <section class="section">
+                <div class="intro-grid">
+                    <div class="panel reveal delay-1">
+                        <h1 class="section-title reveal">Hello!</h1>
+                        <p>I'm Leif Schaumann, a human. I am interested in math, game development, music, and many other
+                            things! Currently I am working towards a PhD in mathematics at Cornell University.</p>
                     </div>
-                </article>
-
-                <aside class="panel reveal delay-2" aria-label="Quick facts">
-                    <h2>Quick facts</h2>
-                    <ul class="quick-list">
-                        <li>Based in: Your city</li>
-                        <li>Current focus: Web development, design, and learning</li>
-                        <li>Open to: Collaborations and freelance opportunities</li>
-                    </ul>
-                </aside>
-            </section>
-
-            <section class="section" id="about">
-                <h2 class="section-title reveal">About</h2>
-                <div class="panel about reveal delay-1">
-                    <p>Write 2-4 sentences here that describe who you are, what you care about, and what you are
-                        currently building. Keep it simple and specific so visitors immediately understand your
-                        direction.</p>
+                    <aside class="photo-card reveal delay-2" aria-label="Portrait photo">
+                        <img src="images/selfie.JPG" alt="Portrait of Leif Schaumann">
+                    </aside>
                 </div>
             </section>
 
-            <section class="section" id="projects">
-                <h2 class="section-title reveal">Featured Projects</h2>
-                <div class="projects">
-                    <article class="project reveal delay-1">
-                        <span class="tag">Project 01</span>
-                        <h3>Project name</h3>
-                        <p>One sentence on what the project does and why it matters.</p>
-                        <a href="#" aria-label="Open project link">Project link</a>
-                    </article>
-                    <article class="project reveal delay-2">
-                        <span class="tag">Project 02</span>
-                        <h3>Project name</h3>
-                        <p>One sentence on what the project does and why it matters.</p>
-                        <a href="#" aria-label="Open project link">Project link</a>
-                    </article>
-                    <article class="project reveal delay-3">
-                        <span class="tag">Project 03</span>
-                        <h3>Project name</h3>
-                        <p>One sentence on what the project does and why it matters.</p>
-                        <a href="#" aria-label="Open project link">Project link</a>
-                    </article>
-                </div>
-            </section>
-
-            <section class="section" id="contact">
-                <h2 class="section-title reveal">Contact</h2>
-                <div class="panel contact reveal delay-1">
-                    <p>Email: yourname@example.com</p>
-                    <div class="contact-links">
-                        <a class="btn secondary" href="#" aria-label="Open GitHub profile">GitHub</a>
-                        <a class="btn secondary" href="#" aria-label="Open LinkedIn profile">LinkedIn</a>
-                        <a class="btn secondary" href="#" aria-label="Open X profile">X / Twitter</a>
+            <section class="section">
+                <div class="intro-grid">
+                    <aside class="photo-card reveal delay-2" aria-label="Portrait photo">
+                        <img src="images/sunset.JPG" alt="Sunset in my back yard">
+                    </aside>
+                    <div class="panel reveal delay-1">
+                        <h1 class="section-title reveal">Contact & Links</h1>
+                        <p><strong>Email:</strong> les298@cornell.edu</p>
+                        <p><a href="https://www.youtube.com/@leifschaumann8372">YouTube</a></p>
+                        <p><a href="https://github.com/LeifSchaumann">GitHub</a></p>
                     </div>
                 </div>
             </section>
@@ -99,9 +55,7 @@
         </footer>
     </div>
 
-    <script>
-        document.getElementById("year").textContent = String(new Date().getFullYear());
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
