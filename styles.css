@@ -1,9 +1,11 @@
 :root {
-    --bg: #f7f3eb;
+    --bg: #ffffff;
     --paper: rgba(255, 255, 255, 0.85);
     --ink: #1f1d1a;
     --muted: #5d5951;
     --line: #3b3b3b;
+    --lightline: #888888;
+    --lighterline: #b0b0b0;
     --max: 1100px;
     --radius: 18px;
     --shadow: 0 16px 40px rgba(31, 29, 26, 0.1);
@@ -28,13 +30,51 @@ body {
     line-height: 1.6;
 }
 
-#tm-bg {
+#bg-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#bg-content {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+}
+
+@property --bg-wipe {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: -12%;
+}
+
+.tm-bg {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
     pointer-events: none;
+    opacity: 0.98;
+    --bg-wipe: -12%;
+    --bg-feather: 7%;
+    -webkit-mask-image: linear-gradient(to bottom,
+            #000 0%,
+            #000 calc(var(--bg-wipe) - var(--bg-feather)),
+            rgba(0, 0, 0, 0.45) var(--bg-wipe),
+            transparent calc(var(--bg-wipe) + var(--bg-feather)),
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            #000 0%,
+            #000 calc(var(--bg-wipe) - var(--bg-feather)),
+            rgba(0, 0, 0, 0.45) var(--bg-wipe),
+            transparent calc(var(--bg-wipe) + var(--bg-feather)),
+            transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    animation: bgRevealFromTop 2000ms ease-out forwards;
 }
 
 a {
@@ -72,7 +112,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 1.5rem;
     position: sticky;
     top: 1rem;
     /* backdrop-filter: blur(10px); */
@@ -80,7 +120,7 @@ h1 {
     border: 2px solid var(--line);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    background: rgba(255, 253, 248);
+    background: rgba(255, 255, 255);
 }
 
 .brand {
@@ -107,8 +147,17 @@ h1 {
 }
 
 .nav a:hover {
-    border-color: var(--line);
+    border-color: var(--lighterline);
     transform: translateY(-2px);
+}
+
+.nav a.is-active {
+    border-color: var(--lightline);
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.page[hidden] {
+    display: none;
 }
 
 .panel {
@@ -116,7 +165,7 @@ h1 {
     border: 2px solid var(--line);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 1.2rem;
+    padding: 1.2rem 1.8rem;
     display: grid;
     gap: 0.8rem;
     align-content: start;
@@ -128,6 +177,10 @@ h1 {
     max-width: 68ch;
     font-size: 1.2rem;
     line-height: 1.45;
+}
+
+.games-intro p {
+    max-width: none;
 }
 
 .section {
@@ -163,6 +216,46 @@ h1 {
     object-fit: cover;
 }
 
+.games-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.game-card {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    min-height: 430px;
+    gap: 0.7rem;
+}
+
+.game-thumb {
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+}
+
+.game-thumb-link {
+    text-decoration: none;
+    transition: transform 200ms ease;
+}
+
+.game-thumb-link:hover {
+    transform: scale(1.03);
+}
+
+.game-title {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.game-description {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
 footer {
     padding: 2rem 0 2.5rem;
     color: var(--muted);
@@ -187,6 +280,27 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes bgRevealFromTop {
+    0% {
+        opacity: 0.98;
+        --bg-wipe: -12%;
+    }
+
+    100% {
+        opacity: 1;
+        --bg-wipe: 110%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tm-bg {
+        animation: none;
+        opacity: 1;
+        -webkit-mask-image: none;
+        mask-image: none;
     }
 }
 

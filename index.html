@@ -10,52 +10,127 @@
 </head>
 
 <body id="top">
+    <div id="bg-layer" aria-hidden="true"></div>
     <div class="site">
         <header class="topbar reveal">
             <a class="brand" href="#top">Leif Schaumann</a>
             <nav class="nav" aria-label="Main navigation">
-
+                <a href="#home" data-page-link="home">Home</a>
+                <a href="#games" data-page-link="games">Games</a>
+                <a href="#math" data-page-link="math">Math</a>
+                <a href="#music" data-page-link="music">Music</a>
             </nav>
         </header>
 
         <main>
+            <div class="page is-active" data-page="home">
+                <section class="section">
+                    <div class="intro-grid">
+                        <div class="panel reveal delay-1">
+                            <h1 class="section-title">Hello!</h1>
+                            <p>I'm Leif Schaumann, a human. I am interested in math, game development, music, and many
+                                other
+                                things! I plan to showcase some of the things I have made on this website.</p>
+                            <p>Currently I am working towards a PhD in mathematics at <a
+                                    href="https://math.cornell.edu">Cornell University</a>. My research area
+                                will likely be in <a
+                                    href="https://en.wikipedia.org/wiki/Geometric_group_theory">geometric
+                                    group theory</a>.</p>
+                            <p>Pictured to the right is me at Ithaca Falls, and pictured below is my back yard.</p>
+                        </div>
+                        <aside class="photo-card reveal delay-1" aria-label="Portrait photo">
+                            <img src="images/selfie.JPG" alt="Portrait of Leif Schaumann">
+                        </aside>
+                    </div>
+                </section>
 
-            <section class="section">
-                <div class="intro-grid">
+                <section class="section">
+                    <div class="intro-grid">
+                        <aside class="photo-card reveal delay-2" aria-label="Portrait photo">
+                            <img src="images/sunset.JPG" alt="Sunset in my back yard">
+                        </aside>
+                        <div class="panel reveal delay-2">
+                            <h1 class="section-title">Contact & Links</h1>
+                            <p><strong>Email:</strong> les298@cornell.edu</p>
+                            <p><a href="https://www.youtube.com/@leifschaumann8372">YouTube</a></p>
+                            <p><a href="https://loaf-shu.itch.io/">Itch.io</a></p>
+                            <p><a href="https://github.com/LeifSchaumann">GitHub</a></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="page" data-page="games" hidden>
+                <section class="section">
+                    <div class="panel games-intro reveal delay-1">
+                        <h1 class="section-title">Games</h1>
+                        <p>Here are some of the more complete games I (in some cases with others) have made over the
+                            years. They are mostly
+                            developed in
+                            Unity and hosted on <a href="https://loaf-shu.itch.io/">Itch.io</a>. Some of them have
+                            instructions in the game description on Itch,
+                            rather than inside the game itself. Enjoy!</p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="games-grid">
+                        <article class="panel game-card reveal delay-2">
+                            <a class="photo-card game-thumb game-thumb-link" href="https://loaf-shu.itch.io/pondside"
+                                aria-label="Open Pondside on Itch.io" target="_blank" rel="noopener noreferrer">
+                                <img src="game_thumbnails/pondside_thumbnail.png" alt="Pondside thumbnail">
+                            </a>
+                            <h2 class="game-title">Pondside</h2>
+                            <p class="game-description">A pond-based puzzle game. Highly reccomended!</p>
+                        </article>
+
+                        <article class="panel game-card reveal delay-2">
+                            <a class="photo-card game-thumb game-thumb-link" href="https://loaf-shu.itch.io/lab-escape"
+                                aria-label="Open Lab Escape on Itch.io" target="_blank" rel="noopener noreferrer">
+                                <img src="game_thumbnails/lab_escape_thumbnail.png" alt="Lab Escape thumbnail">
+                            </a>
+                            <h2 class="game-title">Lab Escape</h2>
+                            <p class="game-description">A fast paced puzzle/arcade hybrid inspired by <a
+                                    href="https://en.wikipedia.org/wiki/Labyrinth_(board_game)">Labyrinth</a>.</p>
+                        </article>
+
+                        <article class="panel game-card reveal delay-2">
+                            <a class="photo-card game-thumb game-thumb-link"
+                                href="https://loaf-shu.itch.io/cellar-arsonist"
+                                aria-label="Open Cellar Arsonist on Itch.io" target="_blank" rel="noopener noreferrer">
+                                <img src="game_thumbnails/cellar_arsonist_thumbnail.png"
+                                    alt="Cellar Arsonist thumbnail">
+                            </a>
+                            <h2 class="game-title">Cellar Arsonist</h2>
+                            <p class="game-description">Mischevious puzzle game and winner in the <a
+                                    href="https://dga-official-website.vercel.app/index.html">Cornell DGA</a> 2025
+                                October Game Jam!</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <div class="page" data-page="music" hidden>
+                <section class="section">
                     <div class="panel reveal delay-1">
-                        <h1 class="section-title reveal">Hello!</h1>
-                        <p>I'm Leif Schaumann, a human. I am interested in math, game development, music, and many other
-                            things! I plan to showcase some of the things I have made on this website.</p>
-                        <p>Currently I am working towards a PhD in mathematics at <a
-                                href="https://math.cornell.edu">Cornell University</a>. My research area
-                            will likely be in <a href="https://en.wikipedia.org/wiki/Geometric_group_theory">geometric
-                                group theory</a>.</p>
-                        <p>Pictured to the right is me at Ithaca Falls, and pictured below is my back yard.</p>
+                        <h1 class="section-title">Music</h1>
+                        <p>Work in progress! Check back later.</p>
                     </div>
-                    <aside class="photo-card reveal delay-1" aria-label="Portrait photo">
-                        <img src="images/selfie.JPG" alt="Portrait of Leif Schaumann">
-                    </aside>
-                </div>
-            </section>
+                </section>
+            </div>
 
-            <section class="section">
-                <div class="intro-grid">
-                    <aside class="photo-card reveal delay-2" aria-label="Portrait photo">
-                        <img src="images/sunset.JPG" alt="Sunset in my back yard">
-                    </aside>
-                    <div class="panel reveal delay-2">
-                        <h1 class="section-title reveal">Contact & Links</h1>
-                        <p><strong>Email:</strong> les298@cornell.edu</p>
-                        <p><a href="https://www.youtube.com/@leifschaumann8372">YouTube</a></p>
-                        <p><a href="https://loaf-shu.itch.io/">Itch.io</a></p>
-                        <p><a href="https://github.com/LeifSchaumann">GitHub</a></p>
+            <div class="page" data-page="math" hidden>
+                <section class="section">
+                    <div class="panel reveal delay-1">
+                        <h1 class="section-title">Math</h1>
+                        <p>Work in progress! Check back later.</p>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
 
         <footer>
-            <p>&copy; <span id="year"></span> Leif Schaumann. Built with HTML and CSS.</p>
+            <p>&copy; <span id="year"></span> Leif Schaumann. Built with HTML, CSS, and JavaScript.</p>
         </footer>
     </div>
 
