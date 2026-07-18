@@ -174,13 +174,8 @@ h1 {
 .panel p {
     margin: 0;
     color: var(--ink);
-    max-width: 68ch;
     font-size: 1.2rem;
     line-height: 1.45;
-}
-
-.games-intro p {
-    max-width: none;
 }
 
 .section {
@@ -245,7 +240,7 @@ h1 {
 }
 
 .game-title {
-    margin: 0;
+    margin: 0.5rem 0 0 0;
     font-size: 1.2rem;
     line-height: 1.2;
 }
